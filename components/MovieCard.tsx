@@ -22,17 +22,18 @@ export default function MovieCard({ movie }: MovieProps) {
   return (
     <div className={styles.card}>
       <div className={styles.imageContainer}>
-        <Image
-          src={
-            movie.poster_path
-              ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
-              : '/images/return.png'
-          }
-          alt={movie.title}
-          layout="fill"
-          objectFit="cover"
-          priority
-        />
+      <Image
+  src={
+    movie.poster_path
+      ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
+      : '/images/return.png'
+  }
+  alt={movie.title}
+  fill
+  style={{ objectFit: 'cover' }}
+  priority
+/>
+
       </div>
       <div className={styles.details}>
         <h2 className={styles.title}>{movie.title}</h2>
